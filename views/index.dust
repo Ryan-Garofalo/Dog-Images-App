@@ -1,14 +1,19 @@
 {>"layout" /}
 {<body}
+  <div class="btn-cont" style="justify-content: center">
     <form method="POST" action="/add">
         <button type="submit" class="btn btn-primary btn-block" data-toggle="modal" data-target="#formModal">Get Dog Picture</button>
     </form>
-  <button type="button"
-  </button>
+    <div style="margin-top: 20px;">
+        <button type="submit" class="btn btn-primary btn-block delete-dog-images" data-toggle="modal" data-target="#formModal">Delete Dog Pictures</button>
+    </div>
+  </div>
   <br />
+  <div class="dog-img-cont" style="display: flex;flex-wrap: wrap;">
     {#dogimages}
         <div class="well">
-          <img src="{url}">
+          <img src="{url}" style="width:auto; height:200px">
         </div>
     {/dogimages}
+  </div>
 {/body}

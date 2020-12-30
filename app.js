@@ -60,7 +60,11 @@ app.post("/add", function(req, res) {
       }
       // console.dir(JSON.parse(body));
       var data = JSON.parse(body);
+      console.log("data recieved");
+      console.log(data);
       var url = data.message;
+      console.log("data Transformed");
+      console.log(url);
 
       pool.connect(function(err, client, done) {
         if (err) {
@@ -70,12 +74,31 @@ app.post("/add", function(req, res) {
           "INSERT INTO dogimages(url) VALUES($1)",
           [url]
         );
+        console.log("Data saved to DB successfully");
       });
 
     }
   );
 
   res.redirect("/");
+});
+
+
+app.delete("/delete", function(req, res) {
+  pool.connect(function(err, client, done) {
+    if (err) {
+      console.log("Can not connect to the DB" + err);
+    }
+    client.query("DELETE FROM dogimages WHERE url !='none'", function(err, result) {
+      done();
+      if (err) {
+        console.log(err);
+        res.status(400).send(err);
+      }
+
+      res.redirect("/");
+    });
+  });
 });
 
 // Server
