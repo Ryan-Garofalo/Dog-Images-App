@@ -1,0 +1,14 @@
+{>"layout" /}
+{<body}
+    <form method="POST" action="/add">
+        <button type="submit" class="btn btn-primary btn-block" data-toggle="modal" data-target="#formModal">Get Dog Picture</button>
+    </form>
+  <button type="button"
+  </button>
+  <br />
+    {#dogimages}
+        <div class="well">
+          <img src="{url}">
+        </div>
+    {/dogimages}
+{/body}

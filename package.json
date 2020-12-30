@@ -1,0 +1,22 @@
+{
+  "name": "recipe-book",
+  "version": "1.0.0",
+  "description": "recipe book",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "*",
+    "consolidate": "*",
+    "dust": "*",
+    "dustjs-helpers": "*",
+    "dustjs-linkedin": "*",
+    "express": "*",
+    "pg": "*",
+    "request": "^2.88.2"
+  }
+}

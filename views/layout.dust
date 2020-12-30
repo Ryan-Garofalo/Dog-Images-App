@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Dog Images App</title>
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-7">
+        {+body /}
+      </div>
+    </div>
+  </div>
+
+  <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="/js/bootstrap.js"></script>
+</body>
+
+</html>
