@@ -80,7 +80,8 @@ app.post("/add", function(req, res) {
     }
   );
 
-  res.redirect("/");
+  res.redirect(req.get('referer'));
+
 });
 
 
@@ -97,6 +98,7 @@ app.delete("/delete", function(req, res) {
       }
 
       res.redirect("/");
+
     });
   });
 });

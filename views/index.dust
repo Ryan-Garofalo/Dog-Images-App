@@ -12,7 +12,7 @@
   <div class="dog-img-cont" style="display: flex;flex-wrap: wrap;">
     {#dogimages}
         <div class="well">
-          <img src="{url}" style="width:auto; height:200px">
+          <img src="{url}" style="width:auto; height:200px; margin-right: 10px;">
         </div>
     {/dogimages}
   </div>
